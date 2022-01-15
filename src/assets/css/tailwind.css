@@ -8,5 +8,16 @@
 
 input {
     @apply py-2 rounded-lg m-2 p-2 border-gray-500 border-2;
-
+}
+.dynamic-input.form-group {
+    @apply w-full;
+}
+#register input {
+    @apply w-full;
+}
+/* #register label {
+    @apply pt-5 w-1/4 text-right float-right;
+} */
+.dynamic-input {
+    @apply w-full
 }
