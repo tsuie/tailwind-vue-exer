@@ -7,6 +7,14 @@ export default {
         }
     },
     methods: {
+        displayName() {
+            if(this.user) {
+                return 'Welcome ' + this.user.name;
+            }
+            else {
+                return '';
+            }
+        },
         logout() {
             localStorage.removeItem('token');
             localStorage.removeItem('user');
