@@ -20,8 +20,19 @@
 
           <!-- secondary nav -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href="/login" class="py-5 px-3">Login</a>
-            <a href="/register" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signup</a>
+            
+            <a href="/login" class="py-5 px-3" v-if="!isLoggedIn">Login</a>
+            <a 
+              href="/register" 
+              class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300"
+              v-if="!isLoggedIn"
+            >Signup</a>
+            <a href="#" class="py-5 px-3" >Welcome {{user.name}}</a>
+            <button 
+              v-if="isLoggedIn"
+              @click="logout"
+              class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300"
+            >Logout</button>
           </div>
 
           <!-- mobile button goes here -->
@@ -43,9 +54,4 @@
       </div>
     </nav>
 </template>
-
-<script>
-export default {
-    name: 'Nav'
-}
-</script>
+<script src="./logic.js"></script>

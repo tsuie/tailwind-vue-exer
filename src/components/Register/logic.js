@@ -3,7 +3,7 @@ import { required, email, minLength, maxLength, sameAs } from 'vuelidate/lib/val
 
 export default {
     name: 'Register',
-    data() {
+    data () {
         return {
             fullname: '',
             username: '',
@@ -48,6 +48,7 @@ export default {
                 console.log('Error',  this.$v.c_password);
                 return;
             }
+
             try {
                 const response = await axios.post('register', {
                     name: this.fullname,
@@ -58,6 +59,7 @@ export default {
                     user_type: 'member'
                 });
                 this.errorMessage = null;
+                this.errors = null;
                 console.log("Submit Data ", response);
                 alert('Account created successfully');
                 this.$router.push('/login');
