@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Register from "./components/Register";
+import Facilities from "./components/Facilities";
 import Vuelidate from 'vuelidate'
 
 Vue.use(Vuelidate)
@@ -16,5 +17,6 @@ export default new VueRouter({
         { path: '/login', name: 'login', component: Login },
         { path: '/dashboard', name: 'dashboard', component: Dashboard },
         { path: '/register', name: 'register' , component: Register },
+        { path: '/facilities', name: 'facilities' , component: Facilities },
     ]
 })

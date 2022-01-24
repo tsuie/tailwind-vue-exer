@@ -21,3 +21,34 @@ input {
 .dynamic-input {
     @apply w-full
 }
+
+table {
+    @apply divide-y divide-gray-300 w-full mt-5;
+}
+table>thead {
+    @apply bg-gray-50;
+}
+table>thead>tr>th {
+    @apply px-6 py-2 text-xs text-gray-500;
+}
+table>tbody {
+    @apply bg-white divide-y divide-gray-300;
+}
+table>tbody>tr {
+    @apply whitespace-nowrap;
+}
+table>tbody>tr>td {
+    @apply px-6 py-4 text-sm text-gray-500 ;
+}
+table>tbody>tr>td>button.delete{
+    @apply px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full;
+}
+table>tbody>tr>td>button.edit{
+    @apply px-4 py-1 text-sm text-blue-400 bg-blue-200 rounded-full;
+}
+.Add {
+    @apply bg-gray-200;
+}
+.Edit {
+    @apply bg-blue-200;
+}
